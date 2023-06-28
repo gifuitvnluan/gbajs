@@ -32,7 +32,7 @@ try {
 		gba.pause();
 		var screen = document.getElementById('screen');
 		if (screen.getAttribute('class') == 'dead') {
-			console.log('We appear to have crashed multiple times without reseting.');
+			console.log('Chúng ta có vẻ đã gặp nhiều lần sự cố mà không khởi động lại.');
 			return;
 		}
 		var crash = document.createElement('img');
@@ -76,13 +76,10 @@ window.onload = function() {
 		dead.parentElement.removeChild(dead);
 		dead = document.getElementById('instructions');
 		dead.textContent = [
-			'Your browser does not appear to be supported. Is it out of date? ',
-			'Safari 5.1 does not contain the functionality needed for loading the ',
-			'game from your hard drive, and as such is unsupported. ',
-			'Likewise, Firefox 14 and below do not contain the functionality used ',
-			'for memory. Firefox 15 is now out, which supports this functionality.',
-			'However, using Safari or Chrome is highly recommended, and are required ',
-			'for sound support.'
+			'Trình duyệt của bạn có vẻ không được hỗ trợ. Liệu nó có còn cập nhật mới nhất không? ',
+			'Safari 5.1 không chứa các tính năng cần thiết để tải trò chơi từ ổ cứng của bạn, và do đó không được hỗ trợ. ',
+			'Tương tự, Firefox 14 và phiên bản cũ hơn không chứa chức năng được sử dụng cho bộ nhớ. Firefox 15 đã được phát hành, hỗ trợ chức năng này. ',
+			'Tuy nhiên, việc sử dụng Safari hoặc Chrome là đề nghị cao, và yêu cầu để hỗ trợ âm thanh. '
 		].join(' ');
 	}
 }
@@ -259,7 +256,7 @@ document.addEventListener('webkitfullscreenchange', function() {
 <body>
 <canvas id="screen" width="480" height="320"></canvas>
 <section id="gameinfo">
-	<p>The Game Boy Advance's buttons are mapped as follows:</p>
+	<p>Các nút trên Game Boy Advance được ánh xạ như sau:</p>
 	<table id="mapping">
 		<tr>
 			<td>A</td>
@@ -309,21 +306,18 @@ document.addEventListener('webkitfullscreenchange', function() {
 </section>
 <section id="instructions">
 	<p>
-		For legal reasons, GBA.js is presented without any included games. Please click Select
-		below to choose a Game Boy Advance game image from your hard drive that you'd like to play.
-		The games must be uncompressed, so unzip them as needed.
+		Vì lý do pháp lý, GBA.js được cung cấp mà không bao gồm bất kỳ trò chơi nào. Vui lòng nhấp vào "Chọn" phía dưới để chọn một hình ảnh trò chơi Game Boy Advance từ ổ cứng của bạn mà bạn muốn chơi.
+Các trò chơi phải không được nén, vì vậy hãy giải nén chúng nếu cần.
 	</p>
 	<p>
-		Please note that this is a beta and there might be compatibility problems. More
-		information and a link to a compatibility table can be found on the sidebar. If you're
-		feeling daring, please submit problem reports to the GitHub page.
+		Vui lòng lưu ý rằng đây là phiên bản beta và có thể gặp các vấn đề về tương thích. Thông tin chi tiết và liên kết đến bảng tương thích có thể được tìm thấy trên thanh bên. Nếu bạn muốn thử thách, vui lòng gửi báo cáo vấn đề tới trang GitHub.
 	</p>
 </section>
 <aside id="moreinfo">
 	<div id="rollover">More Info</div>
 	<header>
 		<h1>GBA.js</h1>
-		<h2>Game Boy Advance in the Browser</h2>
+		<h2>Game Boy Advance trong trình duyệt</h2>
 		<ul id="links">
 			<li><a href="http://github.com/endrift/gbajs/">Fork me on GitHub!</a></li>
 			<li><a href="https://github.com/endrift/gbajs/wiki/Compatibility-List">Compatibility list</a></li>
@@ -334,63 +328,32 @@ document.addEventListener('webkitfullscreenchange', function() {
 		</div>
 	</header>
 	<dl>
-		<dt>How long did it take you to do this?</dt>
+		<dt>Bạn đã mất bao lâu để làm điều này?</dt>
 		<dd>
-			I started in early July. As of the first prototype, it took me five weeks. It's been
-			several more weeks since then, and I've put in several hours per day since starting on
-			this project, so that's a substantial number of hours.
+			Tôi bắt đầu từ đầu tháng 7. Cho đến phiên bản nguyên mẫu đầu tiên, tôi đã mất năm tuần. Kể từ đó đã qua một số tuần nữa, và tôi đã dành nhiều giờ mỗi ngày kể từ khi bắt đầu dự án này, vì vậy đó là một số giờ đáng kể.
 		</dd>
-		<dt>Why isn't it working?</dt>
+		<dt>Vì sao nó không hoạt động?</dt>
 		<dd>
-			You need a very modern browser for this to work. It requires either a recent version of
-			Chrome (up-to-date preferably), Safari 6.0, Firefox 15+ or Opera 12. It might work in
-			IE 10, but definitely not before then. It's also particularly slow in Firefox and
-			Opera, so using Safari or Chrome is highly recommended.
+			Bạn cần một trình duyệt rất hiện đại để hoạt động này. Nó yêu cầu phiên bản gần đây của Chrome (nên là phiên bản mới nhất), Safari 6.0, Firefox 15+ hoặc Opera 12. Có thể hoạt động trên IE 10, nhưng chắc chắn không hoạt động trước đó. Nó cũng rất chậm trên Firefox và Opera, do đó việc sử dụng Safari hoặc Chrome được khuyến nghị.
 		</dd>
-		<dt>Why is there no sound?</dt>
+		<dt>Tại sao không có âm thanh?</dt>
 		<dd>
-			Firefox does not contain the functionality required to support sound without using a
-			plugin like Flash. It does not contain using Flash for sound, so you must use a browser
-			other than Firefox if you want sound.
+			Firefox không chứa chức năng cần thiết để hỗ trợ âm thanh mà không sử dụng một plugin như Flash. Nó không hỗ trợ sử dụng Flash cho âm thanh, vì vậy bạn phải sử dụng một trình duyệt khác ngoài Firefox nếu bạn muốn có âm thanh.
 		</dd>
-		<dt>Why is it so slow?</dt>
+		<dt>Tại sao nó chạy chậm thế?</dt>
 		<dd>
-			The Game Boy Advance runs at a clock speed of roughly 16.78MHz. That means it's doing
-			roughly seventeen million things per second. Although not all of those things are
-			calculations (a lot of them are waiting on memory to become available), that's still a
-			lot of things. While modern computers are more than a hundred times faster than that
-			(and are much better at doing more things at a time), JavaScript has a lot of overhead.
-			As such, squeezing that much performance out of the browser is nearly impossible.
-			Fortunately, browsers and hardware are getting faster all the time, so very soon it
-			will be fast enough to play games at full speed. Meanwhile, I'll do all I can to make
-			it faster without upgrading your hardware or software. Also, it just runs slowly in
-			Firefox in general. I haven't put the time into figuring out why, but it's entirely
-			possible that Firefox just doesn't have the optimizations in place required to make
-			GBA.js run quickly.
+			The Game Boy Advance chạy với tốc độ xấp xỉ 16.78MHz. Điều đó có nghĩa là nó thực hiện khoảng mười bảy triệu hoạt động mỗi giây. Mặc dù không phải tất cả những hoạt động đó đều là tính toán (rất nhiều trong số đó là đợi bộ nhớ trở nên khả dụng), nhưng vẫn là rất nhiều hoạt động. Trong khi máy tính hiện đại nhanh hơn hơn trăm lần so với vậy (và giỏi hơn rất nhiều trong việc làm nhiều việc cùng một lúc), JavaScript có nhiều khâu tổ chức phức tạp. Do đó, việc đạt được hiệu suất đáng kể từ trình duyệt gần như là không thể. May mắn thay, trình duyệt và phần cứng đang ngày càng nhanh hơn, do đó sớm thôi nó sẽ đủ nhanh để chơi game với tốc độ đầy đủ. Trong khi đó, tôi sẽ làm tất cả những gì tôi có thể để tăng tốc độ mà không cần nâng cấp phần cứng hoặc phần mềm của bạn. Ngoài ra, nó chỉ chạy chậm trên Firefox nói chung. Tôi chưa tìm hiểu kỹ về nguyên nhân, nhưng hoàn toàn có thể Firefox không có các tối ưu hóa cần thiết để chạy nhanh GBA.js
 		</dd>
-		<dt>Why the Game Boy Advance?</dt>
+		<dt>Tại sao lại là Game Boy Advance?</dt>
 		<dd>
-			I grew up with the Game Boy Advance. It has scores of wonderful games, and it's not too
-			complicated hardware. However, it's complicated enough to push the boundaries of what
-			JavaScript and the web browser can do, so I figured I'd give it a shot. I've seen other
-			emulators on the internet before, and was inpsired to write this one by Grant Galitz's
-			<a href="http://gamecenter.grantgalitz.org/">amazing Game Boy Color emulator</a>. But
-			instead of rehashing what had already been done, I wanted to try and write something
-			new. The Game Boy Advance was the perfect choice.
+			Tôi lớn lên với Game Boy Advance. Nó có hàng tá trò chơi tuyệt vời và phần cứng không quá phức tạp. Tuy nhiên, nó phức tạp đến mức đủ để thách thức giới hạn của JavaScript và trình duyệt web, vì vậy tôi nghĩ tôi sẽ thử làm một lần. Tôi đã thấy những bộ giả lập khác trên internet trước đây và được truyền cảm hứng để viết bộ giả lập này từ bộ giả lập <a href="http://gamecenter.grantgalitz.org/">amazing Game Boy Color emulator</a> của Grant Galitz. Nhưng thay vì làm điều đã được làm trước đó, tôi muốn thử viết một cái gì đó mới. Game Boy Advance là sự lựa chọn hoàn hảo.
 		</dd>
-		<dt>How good is compatibility?</dt>
+		<dt>Độ tương thích tốt như thế nào?</dt>
 		<dd>
-			Fairly decent! Most games run and are playable, although some will still crash at times
-			or lock up at specific points. Moreover, other minor bugs in graphics or sound are
-			still present, and I'm working on fixing those bugs. A compatibility list can be found
-			<a href="https://github.com/endrift/gbajs/wiki/Compatibility-List">here</a>. Please report any bugs you
-			find on the <a href="http://github.com/endrift/gbajs/issues">GitHub issue tracker</a>.
-			If you're feeling daring, you can also run the
-			<a href="console.html">debug version</a>, and post any useful information it spits out
-			in a problem ticket.
+			Khá tốt! Hầu hết các trò chơi chạy và có thể chơi, tuy nhiên, một số trò chơi vẫn có thể gặp sự cố đôi khi hoặc bị treo ở một số điểm cụ thể. Hơn nữa, các lỗi nhỏ khác liên quan đến đồ họa hoặc âm thanh vẫn còn tồn tại và tôi đang cố gắng sửa những lỗi đó. Một danh sách tương thích có thể được tìm thấy <a href="https://github.com/endrift/gbajs/wiki/Compatibility-List">tại đây</a>. Vui lòng báo cáo bất kỳ lỗi nào bạn tìm thấy trên <a href="http://github.com/endrift/gbajs/issues">trình quản lý lỗi GitHub</a>. Nếu bạn muốn thử thách, bạn cũng có thể chạy phiên bản <a href="console.html">debug</a> và gửi bất kỳ thông tin hữu ích nào nó hiển thị trong một phiếu gặp sự cố.
 		</dd>
-		<dt>So this is cool and all, but what's the point?</dt>
-		<dd>There isn't really a point. I just wanted to make something cool.</dd>
+		<dt>Vậy điều này thật tuyệt và tất cả, nhưng mục đích của nó là gì?</dt>
+		<dd>Thực ra không có mục đích cụ thể. Tôi chỉ muốn tạo ra một cái gì đó thú vị.</dd>
 	</dl>
 	<footer>© 2012 – 2013 <a href="http://endrift.com/">Jeffrey Pfau</a></footer>
 </aside>
