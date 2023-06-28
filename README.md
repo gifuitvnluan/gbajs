@@ -1,76 +1,62 @@
 GBA.js
 ======
-**Version 1.0 Release Candidate 1 — Copyright © 2012 – 2013 Jeffrey Pfau**
+**Phiên bản 1.0 Release Candidate 1 - Bản quyền © 2012 - 2013 Jeffrey Pfau**
 
-GBA.js is a Game Boy Advance emulator written from scratch to employ HTML5 technologies like Canvas and Web Audio. It uses no plugins, and is designed to run on cutting edge web browsers. It is hosted [on GitHub](https://github.com/endrift/gbajs) and is made available under the 2-clause BSD license. The most recent version can be found at [http://endrift.github.io/gbajs/](http://endrift.github.io/gbajs/).
+GBA.js là một bộ giả lập Game Boy Advance được viết từ đầu để sử dụng các công nghệ HTML5 như Canvas và Web Audio. Nó không sử dụng các plugin và được thiết kế để chạy trên các trình duyệt web hiện đại. Nó được lưu trữ [trên GitHub](https://github.com/endrift/gbajs) và được cung cấp dưới giấy phép BSD 2 điều khoản. Phiên bản mới nhất có thể được tìm thấy tại [http://endrift.github.io/gbajs/](http://endrift.github.io/gbajs/).
 
-## Browser Compatibility
-The current version of GBA.js is known to work in the following web browsers:
+## Tương thích với trình duyệt
+Phiên bản hiện tại của GBA.js được biết là hoạt động trên các trình duyệt web sau đây:
 
-* Safari 6.0 or newer
-* Chrome 22 or newer
-* Firefox 25 or newer (slow)
+* Safari 6.0 trở lên
+* Chrome 22 trở lên
+* Firefox 25 trở lên (chạy chậm)
 
-The following web browsers also work, but will have degraded feature sets:
+Các trình duyệt web sau đây cũng hoạt động, nhưng sẽ có các tập hợp tính năng bị giảm chất lượng:
 
-* Firefox 15 or newer (no sound, slow)
-* Opera 12.1x or newer (no sound, slow)
-* Internet Explorer 10 or newer (no sound, slow, pixelated display does not work)
-* Chrome 20, 21 (pixelated display does not work)
+* Firefox 15 trở lên (không âm thanh, chạy chậm)
+* Opera 12.1x trở lên (không âm thanh, chạy chậm)
+* Internet Explorer 10 trở lên (không âm thanh, chạy chậm, hiển thị pixelated không hoạt động)
+* Chrome 20, 21 (hiển thị pixelated không hoạt động)
 
-The following browsers will not work:
+Các trình duyệt web sau đây sẽ không hoạt động:
 
-* Safari 5.1.x or older (no File API for uploading games into JavaScript)
-* Firefox 14 or older (no DataView, used for memory)
-* Internet Explorer 9 or older
+* Safari 5.1.x hoặc cũ hơn (không có File API để tải lên trò chơi vào JavaScript)
+* Firefox 14 hoặc cũ hơn (không có DataView, được sử dụng cho bộ nhớ)
+* Internet Explorer 9 hoặc cũ hơn
 
-All other browsers are untested.
+Tất cả các trình duyệt web khác chưa được kiểm tra.
 
-## Game Compatibility
-Please see the [compatibility list on the GitHub wiki](https://github.com/endrift/gbajs/wiki/Compatibility-List) for a list of tested games. Note that GBA.js is tuned for commercial games, and is currently lacking good support for homebrew games.
+## Tương thích với trò chơi
+Vui lòng xem [danh sách tương thích trên wiki của GitHub](https://github.com/endrift/gbajs/wiki/Compatibility-List) để biết danh sách các trò chơi đã được kiểm tra. Lưu ý rằng GBA.js được điều chỉnh cho các trò chơi thương mại và hiện vẫn chưa hỗ trợ tốt cho các trò chơi tự làm.
 
-## Feature List
-Currently, every part of the Game Boy Advance hardware, save for some lesser used features and the link cable are implemented.
+## Danh sách tính năng
+Hiện tại, mọi phần của phần cứng Game Boy Advance, ngoại trừ một số tính năng ít được sử dụng và cáp kết nối, đã được cài đặt.
 
-The emulator also has these features:
+Bộ giả lập cũng có các tính năng sau:
 
-* Downloadable and uploadable savegames
-* Screenshots
-* Pausing the emulation
-* Support for gamepaks that contain a realtime clock (e.g. Pokemon Ruby and Sapphire)
+* Tải và tải lên savegame
+* Chụp màn hình
+* Tạm dừng giả lập
+* Hỗ trợ gamepaks chứa đồng hồ thời gian thực (ví dụ: Pokemon Ruby và Sapphire)
 
-Features that may be implemented in the future include:
+Các tính năng có thể được cài đặt trong tương lai bao gồm:
 
-* Savestates
-* Remappable controls
-* Gamepad support
-* Link cable over Web Sockets
-* Cheat code support
-* Fullscreen support
-* Support for gamepaks that have other sensors (e.g. WarioWare Twisted!, Boktai)
+* Lưu trạng thái
+* Điều khiển có thể thay đổi
+* Hỗ trợ bộ điều khiển gamepad
+* Cáp kết nối thông qua Web Sockets
+* Hỗ trợ mã cheat
+* Hỗ trợ toàn màn hình
+* Hỗ trợ gamepaks có các cảm biến khác (ví dụ: WarioWare Twisted!, Boktai)
 
 ## License
-Copyright © 2012 – 2013, Jeffrey Pfau
-All rights reserved.
+Bản quyền © 2012 - 2013, Jeffrey Pfau
+Tất cả các quyền được bảo lưu.
 
-Redistribution and use in source and binary forms, with or without
-modification, are permitted provided that the following conditions are met:
+Việc phân phối và sử dụng trong các dạng mã nguồn và nhị phân, có hoặc không có sửa đổi, được phép miễn là các điều kiện sau được đáp ứng:
 
-* Redistributions of source code must retain the above copyright notice, this
-  list of conditions and the following disclaimer.
+* Việc phân phối mã nguồn phải giữ lại thông báo bản quyền trên và danh sách các điều kiện và từ từ từ chối phía trên.
 
-* Redistributions in binary form must reproduce the above copyright notice,
-  this list of conditions and the following disclaimer in the documentation
-  and/or other materials provided with the distribution.
+* Việc phân phối dưới dạng nhị phân phải sao chép lại thông báo bản quyền trên, danh sách các điều kiện và từ từ từ chối phía trên trong tài liệu và / hoặc các tài liệu khác đi kèm với phân phối.
 
-THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
-AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
-IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
-ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE
-LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
-CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
-SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
-INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
-CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
-ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
-POSSIBILITY OF SUCH DAMAGE.
+PHẦN MỀM NÀY ĐƯỢC CUNG CẤP BỞI CHỦ SỞ HỮU BẢN QUYỀN VÀ CỘNG TÁC VIÊN "NHƯ VẬY" VÀ BẤT KỂ BẤT KỲ BẢO HÀNH RÕ RÀNG HOẶC NGỤ Ý NÀO, BAO GỒM, NHƯNG KHÔNG GIỚI HẠN, CÁC BẢO HÀNH VỀ CHẤT LƯỢNG HỢP LÝ VÀ TƯƠNG THÍCH VỚI MỘT MỤC ĐÍCH CỤ THỂ NÀO ĐÓ ĐƯỢC TỪ CHỐI. TRONG BẤT KỲ TRƯỜNG HỢP NÀO, CHỦ SỞ HỮU BẢN QUYỀN HOẶC CỘNG TÁC VIÊN SẼ KHÔNG CHỊU TRÁCH NHIỆM CHO BẤT KỲ THIỆT HẠI TRỰC TIẾP,
